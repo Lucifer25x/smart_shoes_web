@@ -78,7 +78,7 @@ export default function Sinup() {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="password" className="form-label">
+            <label htmlFor="birthday" className="form-label">
               Doğum tarixi
             </label>
             <input
@@ -88,16 +88,6 @@ export default function Sinup() {
               onChange={(e) => setBirthday(e.target.value)}
               required
             />
-          </div>
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="rememberMe"
-            />
-            <label className="form-check-label" htmlFor="rememberMe">
-              Məni xatırla
-            </label>
           </div>
           <div className="d-grid gap-2 mx-auto">
             <button type="submit" className="btn btn-primary">

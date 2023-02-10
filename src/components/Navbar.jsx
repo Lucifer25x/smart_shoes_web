@@ -2,6 +2,12 @@ import React from "react";
 
 export default function Navbar() {
   let logged = localStorage.getItem('account') || false;
+
+  const logOut = () => {
+    localStorage.removeItem('account');
+    window.location = '/';
+  }
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -23,7 +29,7 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a className="nav-link" aria-current="page" href="/">
                   Ana səhifə
                 </a>
               </li>
@@ -48,7 +54,7 @@ export default function Navbar() {
                       className={
                         logged ? "dropdown-item" : "dropdown-item disabled"
                       }
-                      href="#"
+                      href="/account"
                     >
                       Hesab parametrləri
                     </a>
@@ -85,6 +91,11 @@ export default function Navbar() {
             >
               Daxil olun
             </a>
+            <button
+            style={logged ? { marginLeft: "10px"} : {display: "none"}}
+            className="btn btn-danger"
+            onClick={e => logOut()}
+            >Hesabdan Çıxın</button>
           </div>
         </div>
       </nav>

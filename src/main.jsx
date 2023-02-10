@@ -8,6 +8,7 @@ import NoPage from "./pages/NoPage";
 import Search from "./pages/Search";
 import About from "./pages/About";
 import Settings from "./pages/Settings";
+import AccountSettings from "./pages/AccountSettings";
 import "./style.css";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="search" element={<Search />} />
           <Route path="about" element={<About />} />
           <Route path="settings" element={<Settings/>} />
+          <Route path="account" element={<AccountSettings/>} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

@@ -67,16 +67,6 @@ export default function Login() {
               required
             />
           </div>
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="rememberMe"
-            />
-            <label className="form-check-label" htmlFor="rememberMe">
-              Məni xatırla
-            </label>
-          </div>
           <div className="d-grid gap-2 mx-auto">
             <button type="submit" className="btn btn-primary">
               Daxil olun

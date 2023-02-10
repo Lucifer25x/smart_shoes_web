@@ -59,11 +59,46 @@ export default function About(){
             Brauzerdə aç
           </a>
         </p>
+        <br />
+        <hr />
+        <h1>Video</h1>
+        <hr />
+        <br />
+        <video width="80%" controls>
+          <source src="../../images/smart-shoes.mp4" type="video/mp4"/>
+          Brauzeriniz mp4 formatını dəstəkləmir.
+        </video>
+        <br />
         <hr />
         <h1>Şəkillər</h1>
+        <hr />
         <br />
         <div>
+          <h3>Qurğu</h3>
+          <br />
           <ul>
+            <li>
+              <label>Qurğunun ayaqqabı üzərindəki şəkili</label>
+              <br />
+              <br />
+              <img
+                width={300}
+                src="/images/gercek.jpg"
+                alt="Real Photo of mechanism"
+              />
+            </li>
+            <br />
+            <li>
+              <label>Qurğunun ayaqqabı üzərindəki şəkili - 2</label>
+              <br />
+              <br />
+              <img
+                width={300}
+                src="/images/gercek-2.jpg"
+                alt="Real Photo of mechanism 2"
+              />
+            </li>
+            <br />
             <li>
               <label>Simulyasiyadan ekran görüntüsü</label>
               <br />
@@ -74,7 +109,13 @@ export default function About(){
                 alt="Screenshot from simulation"
               />
             </li>
-            <br />
+          </ul>
+          <br />
+          <hr />
+          <br />
+          <h3>Qurğunun daxili hissələri</h3>
+          <br />
+          <ul>
             <li>
               <label>Arduino Uno</label>
               <br />
