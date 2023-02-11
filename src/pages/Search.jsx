@@ -57,7 +57,7 @@ export default function Search(){
 
     return (
       <>
-        <Navbar search="name"/>
+        <Navbar search={name}/>
         <ul className="list-group list-group-flush">
           {res.map((user, i) => (
             <li
