@@ -18,11 +18,12 @@ export default function Sinup() {
       name: name,
       password: password,
       friends: '[]',
+      location: '',
       info: `{"birthday": "${birthday}"}`
     }
 
     axios.post(baseUrl, data).then(response => {
-      localStorage.setItem('account', `{"id": ${response.data.insertId}, "name": "${name}, "email": "${email}"}`)
+      localStorage.setItem('account', `{"id": ${response.data.insertId}, "name": "${name}", "email": "${email}"}`)
       window.location = "/";
     })
   };
