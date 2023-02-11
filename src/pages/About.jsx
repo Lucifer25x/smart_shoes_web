@@ -65,7 +65,7 @@ export default function About(){
         <hr />
         <br />
         <video width="80%" controls>
-          <source src="../../images/smart-shoes.mp4" type="video/mp4"/>
+          <source src="./images/smart-shoes.mp4" type="video/mp4"/>
           Brauzeriniz mp4 formatını dəstəkləmir.
         </video>
         <br />
