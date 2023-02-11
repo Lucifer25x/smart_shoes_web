@@ -5,10 +5,10 @@ import axios from "axios";
 const baseUrl = "https://smart-shoes-api.lucifer25x.repl.co/users/signup";
 
 export default function Sinup() {
-  const [email, setEmail] = React.useState('');
-  const [name, setName] = React.useState('');
-  const [password, setPassword] = React.useState('');
-  const [birthday, setBirthday] = React.useState('');
+  const [email, setEmail] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [birthday, setBirthday] = React.useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,15 +17,18 @@ export default function Sinup() {
       email: email,
       name: name,
       password: password,
-      friends: '[]',
-      location: '',
-      info: `{"birthday": "${birthday}"}`
-    }
+      friends: "[]",
+      location: "",
+      info: `{"birthday": "${birthday}"}`,
+    };
 
-    axios.post(baseUrl, data).then(response => {
-      localStorage.setItem('account', `{"id": ${response.data.insertId}, "name": "${name}", "email": "${email}"}`)
+    axios.post(baseUrl, data).then((response) => {
+      localStorage.setItem(
+        "account",
+        `{"id": ${response.data.insertId}, "name": "${name}", "email": "${email}"}`
+      );
       window.location = "/";
-    })
+    });
   };
 
   return (

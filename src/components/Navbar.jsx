@@ -1,12 +1,12 @@
 import React from "react";
 
 export default function Navbar(props) {
-  let logged = localStorage.getItem('account') || false;
+  let logged = localStorage.getItem("account") || false;
 
   const logOut = () => {
-    localStorage.removeItem('account');
-    window.location = '/';
-  }
+    localStorage.removeItem("account");
+    window.location = "/";
+  };
 
   return (
     <>
@@ -39,7 +39,10 @@ export default function Navbar(props) {
                 </a>
               </li>
               <li className="nav-item">
-                <a className={logged ? "nav-link" : "nav-link disabled"} href="/friends">
+                <a
+                  className={logged ? "nav-link" : "nav-link disabled"}
+                  href="/friends"
+                >
                   Dostlar
                 </a>
               </li>
@@ -84,7 +87,7 @@ export default function Navbar(props) {
                 placeholder="Axtarın..."
                 aria-label="Search"
                 name="name"
-                defaultValue={props.search ? props.search : ''}
+                defaultValue={props.search ? props.search : ""}
               />
               <button className="btn btn-secondary" type="submit">
                 Axtarın

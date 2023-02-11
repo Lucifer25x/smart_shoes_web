@@ -36,10 +36,10 @@ export default function Friends() {
           axios
             .post(baseUrl + "getLocation", { name: user })
             .then((response) => {
-                let location = JSON.parse(response.data) || false;
-                if(location){
-                    window.location.href = `https://www.google.com/maps/@${location.lat},${location.lng},20z`;
-                }
+              let location = JSON.parse(response.data) || false;
+              if (location) {
+                window.location.href = `https://www.google.com/maps/@${location.lat},${location.lng},20z`;
+              }
             });
         } else {
           alert(`Sən ${user}in dostlar siyahısına daxil deyilsən.`);

@@ -63,7 +63,17 @@ export default function Dashboard() {
       <h1 style={{ marginTop: "10px" }}>Ana Səhifə</h1>
       <hr />
       <br />
-      <a target="_blank" style={!location ? {display: 'none'} : {display: 'block'}} href={location ? `https://www.google.com/maps/@${location.lat},${location.lng},20z` : '/'}>Lokasiyanızı Google Maps'də açın.</a>
+      <a
+        target="_blank"
+        style={!location ? { display: "none" } : { display: "block" }}
+        href={
+          location
+            ? `https://www.google.com/maps/@${location.lat},${location.lng},20z`
+            : "/"
+        }
+      >
+        Lokasiyanızı Google Maps'də açın.
+      </a>
     </>
   );
 }

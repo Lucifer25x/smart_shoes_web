@@ -13,21 +13,18 @@ export default function Login() {
 
     const data = {
       email: email,
-      password: password
+      password: password,
     };
 
     axios.post(baseUrl, data).then((response) => {
-      if(response.data.length == 0){
-        alert('Email ünvanı və ya şifrə səhv daxil edilmişdir.')
+      if (response.data.length == 0) {
+        alert("Email ünvanı və ya şifrə səhv daxil edilmişdir.");
       } else {
-        localStorage.setItem(
-          "account",
-          JSON.stringify(response.data[0])
-        );
-        window.location = '/';
+        localStorage.setItem("account", JSON.stringify(response.data[0]));
+        window.location = "/";
       }
     });
-  }
+  };
 
   return (
     <>

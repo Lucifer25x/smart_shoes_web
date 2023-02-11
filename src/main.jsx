@@ -22,9 +22,9 @@ export default function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="search" element={<Search />} />
           <Route path="about" element={<About />} />
-          <Route path="settings" element={<Settings/>} />
-          <Route path="account" element={<AccountSettings/>} />
-          <Route path="friends" element={<Friends/>} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="account" element={<AccountSettings />} />
+          <Route path="friends" element={<Friends />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
