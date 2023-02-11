@@ -109,7 +109,7 @@ export default function AccountSettings() {
               </button>
             </div>
             <div className="d-grid gap-2 mx-auto">
-              <button type="button" className="btn btn-danger" onClick={e => {deleteAccount()}>
+              <button type="button" className="btn btn-danger" onClick={e => {deleteAccount()}}>
                 Hesabı silin.
               </button>
             </div>
