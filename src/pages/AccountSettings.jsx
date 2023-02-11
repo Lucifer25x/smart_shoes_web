@@ -43,6 +43,18 @@ export default function AccountSettings() {
             //TODO: ad gununu deyis.
         }
     }
+    
+    const deleteAccount = e => {
+      if(window.confirm('Hesabı silmək istəyirsinizmi?')){
+        axios.post(baseUrl + 'delete', {id: account.id, password: account.password}).then(response => {
+          if(response.data.affectedRows == 1){
+            localStorage.removeItem('account');
+          } else {
+            alert('Hesab silinmədi');
+          }
+        })
+      }
+    }
     return (
       <>
         <Navbar />
@@ -94,6 +106,11 @@ export default function AccountSettings() {
             <div className="d-grid gap-2 mx-auto">
               <button type="submit" className="btn btn-primary">
                 Məlumatları yeniləyin.
+              </button>
+            </div>
+            <div className="d-grid gap-2 mx-auto">
+              <button type="button" className="btn btn-danger" onClick={e => {deleteAccount()}>
+                Hesabı silin.
               </button>
             </div>
           </form>
