@@ -29,6 +29,7 @@ export default function Search(){
           if(response.data.affectedRows == 1){
             account.friends = JSON.stringify(friends);
             localStorage.setItem('account', JSON.stringify(account))
+            window.location = '/search?name=' + name;
           } else {
             alert('Əlavə etməkdə problem yarandı.')
           }
@@ -37,7 +38,21 @@ export default function Search(){
     }
 
     const deleteFriend = user => {
-      //
+      if(account){
+        let lst = account.friends.slice(1, account.friends.length - 1);
+        let friends = lst.length > 0 ? lst.split(",") : [];
+
+        friends.splice(friends.indexOf(user), 1);
+        axios.post(baseUrl + 'updateInfo', {id: account.id, password: account.password, info: JSON.stringify(friends), which: "friends"}).then(response => {
+          if (response.data.affectedRows == 1) {
+            account.friends = JSON.stringify(friends);
+            localStorage.setItem("account", JSON.stringify(account));
+            window.location = "/search?name=" + name;
+          } else {
+            alert("Silməkdə problem yarandı.");
+          }
+        })
+      }
     }
 
     return (

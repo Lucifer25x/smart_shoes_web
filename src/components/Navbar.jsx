@@ -38,6 +38,11 @@ export default function Navbar() {
                   Haqqında
                 </a>
               </li>
+              <li className="nav-item">
+                <a className={logged ? "nav-link" : "nav-link disabled"} href="/friends">
+                  Dostlar
+                </a>
+              </li>
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -92,10 +97,12 @@ export default function Navbar() {
               Daxil olun
             </a>
             <button
-            style={logged ? { marginLeft: "10px"} : {display: "none"}}
-            className="btn btn-danger"
-            onClick={e => logOut()}
-            >Hesabdan Çıxın</button>
+              style={logged ? { marginLeft: "10px" } : { display: "none" }}
+              className="btn btn-danger"
+              onClick={(e) => logOut()}
+            >
+              Hesabdan Çıxın
+            </button>
           </div>
         </div>
       </nav>

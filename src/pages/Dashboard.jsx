@@ -57,18 +57,6 @@ export default function Dashboard() {
     }
   };
 
-  function dostlar(e){
-    const url = "https://smart-shoes-api.lucifer25x.repl.co/users/getFriends";
-    axios.post(url, {name: 'mehmet'}).then(response => {
-        let friends = JSON.parse(response.data);
-        if(friends.indexOf(account.name) != -1){
-            alert('Sən dostlar siyahısındasan.')
-        } else {
-            alert('Sən dostlar siyahısında deyilsən.')
-        }
-    })
-  }
-
   return (
     <>
       <Navbar />
@@ -76,8 +64,6 @@ export default function Dashboard() {
       <hr />
       <br />
       <a target="_blank" style={!location ? {display: 'none'} : {display: 'flex'}} href={location ? `https://www.google.com/maps/@${location.lat},${location.lng},20z` : '/'}>Lokasiyanızı Google Maps'də açın.</a>
-      <br />
-      <button onClick={e => dostlar()}>Dostlar</button>
     </>
   );
 }

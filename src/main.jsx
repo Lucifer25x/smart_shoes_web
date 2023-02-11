@@ -9,6 +9,7 @@ import Search from "./pages/Search";
 import About from "./pages/About";
 import Settings from "./pages/Settings";
 import AccountSettings from "./pages/AccountSettings";
+import Friends from "./pages/Friends";
 import "./style.css";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="settings" element={<Settings/>} />
           <Route path="account" element={<AccountSettings/>} />
+          <Route path="friends" element={<Friends/>} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
