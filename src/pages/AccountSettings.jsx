@@ -49,6 +49,7 @@ export default function AccountSettings() {
         axios.post(baseUrl + 'delete', {id: account.id, password: account.password}).then(response => {
           if(response.data.affectedRows == 1){
             localStorage.removeItem('account');
+            window.location = '/'
           } else {
             alert('Hesab silinmədi');
           }
