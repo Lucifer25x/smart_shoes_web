@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar(props) {
   let logged = localStorage.getItem('account') || false;
 
   const logOut = () => {
@@ -84,6 +84,7 @@ export default function Navbar() {
                 placeholder="Axtarın..."
                 aria-label="Search"
                 name="name"
+                defaultValue={props.search ? props.search : ''}
               />
               <button className="btn btn-secondary" type="submit">
                 Axtarın
