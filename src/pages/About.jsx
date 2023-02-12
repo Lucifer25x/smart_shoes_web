@@ -36,23 +36,26 @@ export default function About() {
         </a>
         <br />- Proyekt haqqında olan slaydı yükləyin: <span> </span>
         <a
-          href="https://smart-shoes-slides.netlify.app/slayd.pdf"
+          href="https://smart-shoes-slides.netlify.app/smart-shoes.pdf"
           target="_blank"
         >
           PDF/
         </a>
         <a
-          href="https://smart-shoes-slides.netlify.app/slayd.odp"
+          href="https://smart-shoes-slides.netlify.app/smart-shoes.odp"
           target="_blank"
         >
-          ODP
+          ODP/
+        </a>
+        <a 
+          href="https://smart-shoes-slides.netlify.app/smart-shoes.pptx"
+          target="_blank"
+        >
+          PPTX
         </a>
         <br />- Siz həmçinin slaydları brauzeriniz üzərindən onlayn olaraq
         görüntüləyə bilərsiniz: <span> </span>
-        <a
-          href="https://smart-shoes-slides.netlify.app/slayd.html"
-          target="_blank"
-        >
+        <a href="https://smart-shoes-slides.netlify.app" target="_blank">
           Brauzerdə aç
         </a>
       </p>
