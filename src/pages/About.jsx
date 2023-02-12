@@ -47,7 +47,7 @@ export default function About() {
         >
           ODP/
         </a>
-        <a 
+        <a
           href="https://smart-shoes-slides.netlify.app/smart-shoes.pptx"
           target="_blank"
         >
@@ -58,6 +58,11 @@ export default function About() {
         <a href="https://smart-shoes-slides.netlify.app" target="_blank">
           Brauzerdə aç
         </a>
+      </p>
+      <br />
+      <p>
+        <b>Qeyd: </b> Saytda dostlarınızın son onlayn olma tarixlərini görmək
+        üçün adlarının üzərinə iki dəfə klikləyin.
       </p>
       <br />
       <hr />

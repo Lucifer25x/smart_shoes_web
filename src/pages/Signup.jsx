@@ -20,10 +20,11 @@ export default function Sinup() {
       friends: "[]",
       location: "",
       info: `{"birthday": "${birthday}"}`,
+      last: "",
     };
 
     axios.get(baseUrl + "check/" + email).then((response) => {
-      if(response.data.length == 0){
+      if (response.data.length == 0) {
         axios.post(baseUrl + "signup", data).then((response) => {
           localStorage.setItem(
             "account",
@@ -32,7 +33,9 @@ export default function Sinup() {
           window.location = "/";
         });
       } else {
-        alert("Bu email ünvanı artıq istifadədir. Fərqli email ünvanından istifadə edin.")
+        alert(
+          "Bu email ünvanı artıq istifadədir. Fərqli email ünvanından istifadə edin."
+        );
       }
     });
   };

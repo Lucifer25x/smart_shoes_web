@@ -9,6 +9,7 @@ export default function Friends() {
   if (account) {
     let lst = account.friends.slice(1, account.friends.length - 1);
     let friends = lst.length > 0 ? lst.split(",") : [];
+
     const deleteFriend = (user) => {
       friends.splice(friends.indexOf(user), 1);
       axios
@@ -47,6 +48,16 @@ export default function Friends() {
       });
     };
 
+    const getLast = (user) => {
+      axios
+        .post(baseUrl + "getLast", {
+          name: user,
+        })
+        .then((response) => {
+          alert(response.data);
+        });
+    };
+
     return (
       <>
         <Navbar />
@@ -58,13 +69,18 @@ export default function Friends() {
               key={i}
             >
               <div className="row container-fluid">
-                <div className="col-8 rw">
+                <div className="col-6 rw">
                   <div className="avatar">{user.slice(1, 2).toUpperCase()}</div>
-                  <span style={{ marginLeft: "10px" }}>
+                  <span
+                    style={{ marginLeft: "10px" }}
+                    onDoubleClick={(e) =>
+                      getLast(user.slice(1, user.length - 1))
+                    }
+                  >
                     {user.slice(1, user.length - 1)}
                   </span>
                 </div>
-                <div className="col-4 rl">
+                <div className="col-6 rl">
                   <button
                     className="btn btn-danger"
                     onClick={(e) =>

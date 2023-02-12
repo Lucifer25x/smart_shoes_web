@@ -2,14 +2,23 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 
-const baseUrl =
-  "https://smart-shoes-api.lucifer25x.repl.co/users/updateLocation";
+const baseUrl = "https://smart-shoes-api.lucifer25x.repl.co/users/";
 
 export default function Dashboard() {
   const account = JSON.parse(localStorage.getItem("account"));
   const location = JSON.parse(localStorage.getItem("location")) || false;
 
   window.onload = () => {
+    const time = new Date().toLocaleString();
+    localStorage.setItem("last", time);
+    axios
+      .post(baseUrl + "setLast", { id: account.id, last: time })
+      .then((response) => {
+        if (response.data.affectedRows != 1) {
+          alert("Son görülmə tarixinin saxlanmasında problem yarandı.");
+        }
+      });
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -22,7 +31,7 @@ export default function Dashboard() {
             if (location != pos) {
               localStorage.setItem("location", JSON.stringify(pos));
               axios
-                .post(baseUrl, {
+                .post(baseUrl + "updateLocation", {
                   id: account.id,
                   location: JSON.stringify(pos),
                 })
@@ -35,7 +44,7 @@ export default function Dashboard() {
           } else {
             localStorage.setItem("location", JSON.stringify(pos));
             axios
-              .post(baseUrl, {
+              .post(baseUrl + "updateLocation", {
                 id: account.id,
                 location: JSON.stringify(pos),
               })
@@ -62,6 +71,7 @@ export default function Dashboard() {
       <Navbar />
       <h1 style={{ marginTop: "10px" }}>Ana Səhifə</h1>
       <hr />
+      <h3>Xoş gəldiniz, {account.name}.</h3>
       <br />
       <a
         target="_blank"
