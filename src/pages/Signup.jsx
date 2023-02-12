@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 
-const baseUrl = "https://smart-shoes-api.lucifer25x.repl.co/users/signup";
+const baseUrl = "https://smart-shoes-api.lucifer25x.repl.co/users/";
 
 export default function Sinup() {
   const [email, setEmail] = React.useState("");
@@ -22,12 +22,18 @@ export default function Sinup() {
       info: `{"birthday": "${birthday}"}`,
     };
 
-    axios.post(baseUrl, data).then((response) => {
-      localStorage.setItem(
-        "account",
-        `{"id": ${response.data.insertId}, "name": "${name}", "email": "${email}"}`
-      );
-      window.location = "/";
+    axios.get(baseUrl + "check/" + email).then((response) => {
+      if(response.data.length == 0){
+        axios.post(baseUrl + "signup", data).then((response) => {
+          localStorage.setItem(
+            "account",
+            `{"id": ${response.data.insertId}, "name": "${name}", "email": "${email}"}`
+          );
+          window.location = "/";
+        });
+      } else {
+        alert("Bu email ünvanı artıq istifadədir. Fərqli email ünvanından istifadə edin.")
+      }
     });
   };
 
