@@ -88,6 +88,7 @@ export default function Navbar(props) {
                 aria-label="Search"
                 name="name"
                 defaultValue={props.search ? props.search : ""}
+                required
               />
               <button className="btn btn-secondary" type="submit">
                 Axtarın
