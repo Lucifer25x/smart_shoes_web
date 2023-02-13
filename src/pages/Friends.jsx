@@ -10,6 +10,21 @@ export default function Friends() {
     let lst = account.friends.slice(1, account.friends.length - 1);
     let friends = lst.length > 0 ? lst.split(",") : [];
 
+    const sekilci = (user) => {
+      const saitler = ["a", "ı", "o", "u", "e", "ə", "i", "ö"];
+      let last = "";
+      for (let i = 0; i < user.length; i++) {
+        if (saitler.indexOf(user[i]) != -1) {
+          last = user[i];
+        }
+      }
+      if (last == user[user.length - 1]) {
+        return `n${last}n`;
+      } else {
+        return `${last}n`;
+      }
+    };
+
     const deleteFriend = (user) => {
       friends.splice(friends.indexOf(user), 1);
       axios
@@ -43,7 +58,7 @@ export default function Friends() {
               }
             });
         } else {
-          alert(`Sən ${user}in dostlar siyahısına daxil deyilsən.`);
+          alert(`Sən ${user}${sekilci(user)} dostlar siyahısına daxil deyilsən.`);
         }
       });
     };
