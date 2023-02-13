@@ -20,3 +20,6 @@
   align-items: center;
   justify-content: flex-end;
 }
+.btn {
+  white-space: normal !important;
+}

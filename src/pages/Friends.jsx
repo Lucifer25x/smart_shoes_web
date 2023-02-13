@@ -92,7 +92,7 @@ export default function Friends() {
               key={i}
             >
               <div className="row container-fluid">
-                <div className="col-6 rw" style={{minWidth: '150px'}}>
+                <div className="col-6 rw">
                   <div className="avatar">{user.slice(1, 2).toUpperCase()}</div>
                   <span
                     style={{ marginLeft: "10px" }}
