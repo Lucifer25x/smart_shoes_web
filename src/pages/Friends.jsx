@@ -99,7 +99,7 @@ export default function Friends() {
                       getLast(user.slice(1, user.length - 1))
                     }
                   >
-                    {user.slice(1, user.length - 1)}
+                    {user}
                   </span>
                 </div>
                 <div className="col-6 rl">
