@@ -65,6 +65,25 @@ export default function About() {
         üçün adlarının üzərinə iki dəfə klikləyin.
       </p>
       <br />
+      <h3>Qaynaq kodları:</h3>
+      <ul>
+        <li>
+          <a href="https://github.com/Lucifer25x/smart_shoes_web">
+            Veb-Saytın qaynaq kodu
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Lucifer25x/smart_shoes_api">
+            Veb-Serverin qaynaq kodu
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Lucifer25x/smart_shoes_arduino">
+            Qurğunun qaynaq kodu
+          </a>
+        </li>
+      </ul>
+      <br />
       <hr />
       <h1>Video</h1>
       <hr />
