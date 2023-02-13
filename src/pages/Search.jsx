@@ -22,9 +22,7 @@ export default function Search() {
 
   const addFriend = (user) => {
     if (account) {
-      let lst = account.friends.slice(1, account.friends.length - 1);
-      let friends = lst.length > 0 ? lst.split(",") : [];
-      console.log(friends);
+      let friends = eval(account.friends) || [];
       friends.push(user);
       axios
         .post(baseUrl + "updateInfo", {
@@ -47,8 +45,7 @@ export default function Search() {
 
   const deleteFriend = (user) => {
     if (account) {
-      let lst = account.friends.slice(1, account.friends.length - 1);
-      let friends = lst.length > 0 ? lst.split(",") : [];
+      let friends = eval(account.friends) || [];
 
       friends.splice(friends.indexOf(user), 1);
       axios
