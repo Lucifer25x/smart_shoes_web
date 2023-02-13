@@ -33,6 +33,7 @@ export default function Search() {
           which: "friends",
         })
         .then((response) => {
+          console.log(response)
           if (response.data.affectedRows == 1) {
             account.friends = JSON.stringify(friends);
             localStorage.setItem("account", JSON.stringify(account));
