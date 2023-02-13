@@ -83,7 +83,25 @@ export default function About() {
         <br />
         <ul>
           <li>
-            <label>Qurğunun ayaqqabı üzərindəki şəkili</label>
+            <label>Qurğunun ayaqqabı üzərindəki şəkili - 1</label>
+            <br />
+            <br />
+            <img width={300} src="/images/shoe3.jpeg" />
+          </li>
+          <li>
+            <label>Qurğunun ayaqqabı üzərindəki şəkili - 2</label>
+            <br />
+            <br />
+            <img width={300} src="/images/shoe1.jpeg" />
+          </li>
+          <li>
+            <label>Qurğunun ayaqqabı üzərindəki şəkili - 3</label>
+            <br />
+            <br />
+            <img width={300} src="/images/shoe2.jpeg" />
+          </li>
+          <li>
+            <label>Qurğunun ayaqqabı üzərindəki şəkili - 5</label>
             <br />
             <br />
             <img
@@ -94,7 +112,7 @@ export default function About() {
           </li>
           <br />
           <li>
-            <label>Qurğunun ayaqqabı üzərindəki şəkili - 2</label>
+            <label>Qurğunun ayaqqabı üzərindəki şəkili - 6</label>
             <br />
             <br />
             <img
