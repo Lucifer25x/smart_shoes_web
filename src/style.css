@@ -14,13 +14,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
+
 .rl {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
-.btn-normal {
-  width: 60px;
-  white-space: normal !important;
+  flex-wrap: wrap;
 }

@@ -105,7 +105,7 @@ export default function Friends() {
                 </div>
                 <div className="col-6 rl">
                   <button
-                    className="btn btn-danger btn-normal"
+                    className="btn btn-danger"
                     onClick={(e) =>
                       deleteFriend(user.slice(1, user.length - 1))
                     }
@@ -115,7 +115,7 @@ export default function Friends() {
                   <button
                     onClick={(e) => getLocation(user.slice(1, user.length - 1))}
                     style={{ marginLeft: "10px" }}
-                    className="btn btn-success btn-normal"
+                    className="btn btn-success"
                   >
                     Lokasiyasını öyrən
                   </button>
