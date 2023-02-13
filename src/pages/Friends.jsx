@@ -96,7 +96,7 @@ export default function Friends() {
                   <span
                     style={{ marginLeft: "10px" }}
                     onDoubleClick={(e) =>
-                      getLast(user.slice(1, user.length - 1))
+                      getLast(user)
                     }
                   >
                     {user}
@@ -106,13 +106,13 @@ export default function Friends() {
                   <button
                     className="btn btn-danger"
                     onClick={(e) =>
-                      deleteFriend(user.slice(1, user.length - 1))
+                      deleteFriend(user)
                     }
                   >
                     Dostluqdan sil
                   </button>
                   <button
-                    onClick={(e) => getLocation(user.slice(1, user.length - 1))}
+                    onClick={(e) => getLocation(user)}
                     style={{ marginLeft: "10px" }}
                     className="btn btn-success"
                   >
