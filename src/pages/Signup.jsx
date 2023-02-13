@@ -28,7 +28,7 @@ export default function Sinup() {
         axios.post(baseUrl + "signup", data).then((response) => {
           localStorage.setItem(
             "account",
-            `{"id": ${response.data.insertId}, "name": "${name}", "email": "${email}", "friends": "[]", "location": "null", "last": "", "info": "{}"}`
+            `{"id": ${response.data.insertId}, "name": "${name}", "email": "${email}", "password": "${password}", "friends": "[]", "location": "null", "last": "", "info": "{}"}`
           );
           window.location = "/";
         });
