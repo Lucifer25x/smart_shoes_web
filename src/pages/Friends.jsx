@@ -7,8 +7,7 @@ const baseUrl = "https://smart-shoes-api.lucifer25x.repl.co/users/";
 export default function Friends() {
   let account = JSON.parse(localStorage.getItem("account")) || false;
   if (account) {
-    let lst = account.friends.slice(1, account.friends.length - 1);
-    let friends = lst.length > 0 ? lst.split(",") : [];
+    let friends = eval(account.friends) || [];
 
     const sekilci = (user) => {
       const saitler = ["a", "ı", "o", "u", "e", "ə", "i", "ö"];
