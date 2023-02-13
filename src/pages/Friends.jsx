@@ -12,10 +12,18 @@ export default function Friends() {
 
     const sekilci = (user) => {
       const saitler = ["a", "ı", "o", "u", "e", "ə", "i", "ö"];
+      const saitler1 = ["a", "ı"];
+      const saitler2 = ["o", "u"];
       let last = "";
       for (let i = 0; i < user.length; i++) {
         if (saitler.indexOf(user[i]) != -1) {
-          last = user[i];
+          if(saitler1.indexOf(user[i]) != -1){
+            last = 'ı';
+          } else if(saitler2.indexOf(user[i]) != -1){
+            last = 'u';
+          } else {
+            last = 'i';
+          }
         }
       }
       if (last == user[user.length - 1]) {
