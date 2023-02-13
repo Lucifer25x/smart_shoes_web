@@ -24,6 +24,7 @@ export default function Search() {
     if (account) {
       let lst = account.friends.slice(1, account.friends.length - 1);
       let friends = lst.length > 0 ? lst.split(",") : [];
+      console.log(friends);
       friends.push(user);
       axios
         .post(baseUrl + "updateInfo", {
